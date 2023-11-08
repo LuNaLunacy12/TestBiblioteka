@@ -95,11 +95,19 @@ namespace TestsFromBibliary
 
             return;
         }
-        // 
+        // проверка что время консультаций совпаает с 30 минутами
         [TestMethod]
         public void TestMethod8()
         {
-            
+            int expectedConsultationTime = 30;
+
+            Assert.AreEqual(expectedConsultationTime, ProgramBibliary.ProgramBibliary.consultationTime);
+        }
+        //
+        [TestMethod]
+        public void TestMethod9()
+        {
+
         }
     }
 }

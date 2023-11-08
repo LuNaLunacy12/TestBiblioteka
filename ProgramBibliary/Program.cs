@@ -22,7 +22,7 @@ namespace ProgramBibliary
         public static TimeSpan beginWorkingTime = new TimeSpan(8, 0, 0);
         public static TimeSpan endWorkingTime = new TimeSpan(18, 0, 0);
 
-        static int consultationTime = 30;
+        public static int consultationTime = 30;
         static void Main(string[] args)
         {
 
