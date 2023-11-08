@@ -60,10 +60,6 @@
       <Project>{1436fc05-d49f-424d-beaa-eff4ba87c717}</Project>
       <Name>BibliaryLukina</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ProgramBibliary\ProgramBibliary.csproj">
-      <Project>{e089cee1-ba88-4e8c-857f-5f212f8da584}</Project>
-      <Name>ProgramBibliary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using ProgramBibliary;
+using BibliaryLukina;
 
 
 namespace TestsFromBibliary
@@ -12,13 +12,13 @@ namespace TestsFromBibliary
         [TestMethod]
         public void TestMethod1()
         {
-            Assert.AreEqual(5, ProgramBibliary.ProgramBibliary.startTimes.Length );
+            Assert.AreEqual(5, BibliaryLukina.ProgramBibliary.startTimes.Length );
         }
         // Проверка что каждый элемент массива startTimes имеет тип TimeSpan
         [TestMethod]
         public void TestMethod2()
         {
-            foreach (TimeSpan time in ProgramBibliary.ProgramBibliary.startTimes)
+            foreach (TimeSpan time in BibliaryLukina.ProgramBibliary.startTimes)
             {
                 Assert.IsInstanceOfType(time, typeof(TimeSpan));
             }
@@ -29,7 +29,7 @@ namespace TestsFromBibliary
         {
             TimeSpan expectedBeginWorkingTime = new TimeSpan(8, 0, 0);
 
-            Assert.AreEqual(expectedBeginWorkingTime, ProgramBibliary.ProgramBibliary.beginWorkingTime);
+            Assert.AreEqual(expectedBeginWorkingTime, BibliaryLukina.ProgramBibliary.beginWorkingTime);
         }
         // Проверить что есть время окончания работы равно 7 часам
         [TestMethod]
@@ -37,15 +37,15 @@ namespace TestsFromBibliary
         {
             TimeSpan expectedEndWorkingTime = new TimeSpan(18, 0, 0);
 
-            Assert.AreEqual(expectedEndWorkingTime, ProgramBibliary.ProgramBibliary.endWorkingTime);
+            Assert.AreEqual(expectedEndWorkingTime, BibliaryLukina.ProgramBibliary.endWorkingTime);
         }
         // значения каждого элемента массива startTimes соответствуют заданным значениям.
         [TestMethod]
         public void TestMethod5()
         {
-            for (int i = 0; i < ProgramBibliary.ProgramBibliary.startTimes.Length; i++)
+            for (int i = 0; i < BibliaryLukina.ProgramBibliary.startTimes.Length; i++)
             {
-                TimeSpan startTime = ProgramBibliary.ProgramBibliary.startTimes[i];
+                TimeSpan startTime = BibliaryLukina.ProgramBibliary.startTimes[i];
 
                 if (i == 0)
                 {
@@ -74,19 +74,19 @@ namespace TestsFromBibliary
         [TestMethod]
         public void TestMethod6()
         {
-            for (int i = 0; i < ProgramBibliary.ProgramBibliary.duration.Length; i++)
+            for (int i = 0; i < BibliaryLukina.ProgramBibliary.duration.Length; i++)
             {
                 int expectedDuration = i == 0 ? 60 : i == 1 ? 30 : i == 2 ? 10 : i == 3 ? 10 : i == 4 ? 40 : 0; 
 
-                Assert.AreEqual(expectedDuration, ProgramBibliary.ProgramBibliary.duration[i]);
+                Assert.AreEqual(expectedDuration, BibliaryLukina.ProgramBibliary.duration[i]);
             }
         }
         // проверка что длина массивов одинкова
         [TestMethod]
         public void TestMethod7()
         {
-            TimeSpan[] startTimes = ProgramBibliary.ProgramBibliary.startTimes;
-            int[] duration = ProgramBibliary.ProgramBibliary.duration;
+            TimeSpan[] startTimes = BibliaryLukina.ProgramBibliary.startTimes;
+            int[] duration = BibliaryLukina.ProgramBibliary.duration;
 
             if (startTimes.Length != duration.Length)
             {
@@ -101,13 +101,8 @@ namespace TestsFromBibliary
         {
             int expectedConsultationTime = 30;
 
-            Assert.AreEqual(expectedConsultationTime, ProgramBibliary.ProgramBibliary.consultationTime);
+            Assert.AreEqual(expectedConsultationTime, BibliaryLukina.ProgramBibliary.consultationTime);
         }
-        //
-        [TestMethod]
-        public void TestMethod9()
-        {
-
-        }
+       
     }
 }
